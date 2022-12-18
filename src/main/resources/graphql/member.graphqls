@@ -1,0 +1,28 @@
+schema {
+    query: Query,
+    mutation: Mutation,
+}
+
+type Mutation {
+    registerMember(memberSn: Int!, memberId: String!, memberEmail: String!, memberNumber: String!): MemberDto
+    deleteMember(memberId: String!): Boolean
+}
+
+type Query{
+	findMembers(memberId: String!): MemberDto!
+	allFindMembers: [MemberDto]
+}
+
+type MemberDto {
+	memberSn: Int!
+	memberId: String!
+	memberEmail : String!
+	memberNumber : String!
+}
+
+input Member {
+	memberSn: Int!
+	memberId: String!
+	memberEmail : String!
+	memberNumber : String!
+}

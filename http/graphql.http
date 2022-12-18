@@ -1,0 +1,27 @@
+### GraphQL Post allFindMembers
+
+POST http://localhost:8080/graphql
+Content-Type: application/graphql
+
+query {
+    allFindMembers {
+        memberSn
+        memberId
+        memberEmail
+        memberNumber
+    }
+}
+
+### GraphQL Post registerMember
+
+POST http://localhost:8080/graphql
+Content-Type: application/graphql
+
+mutation {
+    registerMember(memberSn: 1, memberId: "test", memberEmail: "test@test.com", memberNumber: "01012345678") {
+        memberSn
+        memberId
+        memberEmail
+        memberNumber
+    }
+}

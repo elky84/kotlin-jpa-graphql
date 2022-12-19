@@ -18,10 +18,18 @@ POST http://localhost:8080/graphql
 Content-Type: application/graphql
 
 mutation {
-    registerMember(memberSn: 1, memberId: "test", memberEmail: "test@test.com", memberNumber: "01012345678") {
-        memberSn
+    registerMember(memberId: "test3", memberEmail: "test@test.com", memberNumber: "01012345678") {
         memberId
         memberEmail
         memberNumber
     }
+}
+
+### GraphQL Post deleteMember
+
+POST http://localhost:8080/graphql
+Content-Type: application/graphql
+
+mutation {
+    deleteMember(memberId: "test3")
 }

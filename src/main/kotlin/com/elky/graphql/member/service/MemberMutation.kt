@@ -11,9 +11,8 @@ import org.springframework.graphql.data.method.annotation.MutationMapping
 class MemberMutation(val memberRepository: MemberRepository) : GraphQLMutationResolver {
 
     @MutationMapping
-    fun registerMember(memberSn: Int, memberId: String?, memberEmail: String?, memberNumber: String?): MemberDto {
-        val newMember = Member(memberSn,
-                memberId,
+    fun registerMember(memberId: String?, memberEmail: String?, memberNumber: String?): MemberDto {
+        val newMember = Member(memberId,
                 memberEmail,
                 memberNumber)
         memberRepository.save(newMember)
@@ -21,15 +20,7 @@ class MemberMutation(val memberRepository: MemberRepository) : GraphQLMutationRe
     }
 
     @MutationMapping
-    fun deleteMember(memberId: String?): Boolean {
-        val memberList: List<Member> = memberRepository.findAll()
-        var deleteChk = 0
-        for (member in memberList) {
-            if (member.memberId.equals(memberId)) {
-                memberRepository.delete(member)
-                deleteChk += 1
-            }
-        }
-        return deleteChk > 0
+    fun deleteMember(memberId: String) : Boolean {
+        return memberRepository.deleteByMemberId(memberId) != 0L
     }
 }

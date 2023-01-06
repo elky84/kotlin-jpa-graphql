@@ -20,6 +20,8 @@
 * Kotlin + Spring Boot + JPA 예제입니다.
 * DB는 PostgreSQL을 사용했습니다.
 * GraphQL 지원을 보여주는 간단한 기능 예제입니다.
+* QueryDSL을 통한 동적 쿼리 예시도 보실 수 있습니다.
+* .http 파일은 VS Code REST Client Plugin을 통해서, 쉽게 테스트에 사용하실 수 있습니다.
 
 ## 설정
 * application.properties 혹은 가동하실 환경에 맞는 application-{환경}.properties 파일을 구성하시고, DB 설정을 하시면 됩니다.

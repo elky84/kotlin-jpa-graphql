@@ -4,18 +4,26 @@ schema {
 }
 
 type Mutation {
-    registerMember(memberId: String!, memberEmail: String!, memberNumber: String!): MemberDto
+    createMember(memberId: String!, memberEmail: String!, memberNumber: String!): Member
     deleteMember(memberId: String!): Boolean
 }
 
 type Query{
-	findMember(memberId: String!): MemberDto
-	allFindMembers: [MemberDto]
+	findMember(memberId: String!): Member
+
+	queryMembers(memberDto: MemberDto): [Member]
+
+	allMembers: [Member]
 }
 
-type MemberDto {
+type Member {
 	memberSn: Int!
 	memberId: String!
 	memberEmail : String!
 	memberNumber : String!
+}
+
+input MemberDto {
+	memberEmail : String
+	memberNumber : String
 }

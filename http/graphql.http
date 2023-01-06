@@ -1,10 +1,10 @@
-### GraphQL Post allFindMembers
+### allMembers
 
 POST http://localhost:8080/graphql
 Content-Type: application/graphql
 
 query {
-    allFindMembers {
+    allMembers {
         memberSn
         memberId
         memberEmail
@@ -12,20 +12,48 @@ query {
     }
 }
 
-### GraphQL Post registerMember
+
+### queryMembers (email)
 
 POST http://localhost:8080/graphql
 Content-Type: application/graphql
 
-mutation {
-    registerMember(memberId: "test3", memberEmail: "test@test.com", memberNumber: "01012345678") {
+query {
+    queryMembers(memberDto: {memberEmail: "test@test.com"}) {
         memberId
         memberEmail
         memberNumber
     }
 }
 
-### GraphQL Post deleteMember
+### queryMembers (number)
+
+POST http://localhost:8080/graphql
+Content-Type: application/graphql
+
+query {
+    queryMembers(memberDto: {memberNumber: "45678"}) {
+        memberId
+        memberEmail
+        memberNumber
+    }
+}
+
+
+### createMember
+
+POST http://localhost:8080/graphql
+Content-Type: application/graphql
+
+mutation {
+    createMember(memberId: "test3", memberEmail: "test@test.com", memberNumber: "01012345678") {
+        memberId
+        memberEmail
+        memberNumber
+    }
+}
+
+### deleteMember
 
 POST http://localhost:8080/graphql
 Content-Type: application/graphql

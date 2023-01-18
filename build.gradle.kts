@@ -49,10 +49,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    compileOnly("org.projectlombok:lombok")
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.postgresql:postgresql")
-    annotationProcessor("org.projectlombok:lombok")
 
     implementation("jakarta.validation:jakarta.validation-api:3.0.2")
 

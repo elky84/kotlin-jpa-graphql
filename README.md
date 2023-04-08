@@ -3,7 +3,7 @@
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=elky-essay)](https://elky84.github.io)
 ![Made with](https://img.shields.io/badge/made%20with-Kotlin-brightgreen.svg)
 ![Made with](https://img.shields.io/badge/made%20with-SpringBoot3-blue.svg)
-![Made with](https://img.shields.io/badge/made%20with-MySQL-red.svg)
+![Made with](https://img.shields.io/badge/made%20with-PostgreSQL-red.svg)
 
 ![GitHub forks](https://img.shields.io/github/forks/elky84/kotlin-jpa-graphql.svg?style=social&label=Fork)
 ![GitHub stars](https://img.shields.io/github/stars/elky84/kotlin-jpa-graphql.svg?style=social&label=Stars)
